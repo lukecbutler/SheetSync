@@ -14,6 +14,7 @@ variables to authenticate and prepares the client object for making API calls.
 """
 def configureClient():
 
+    # get client ID and secret for talking to API
     load_dotenv()
     PLAID_CLIENT_ID = os.getenv('PLAID_CLIENT_ID')
     PLAID_SECRET = os.getenv('PLAID_SECRET')
@@ -28,7 +29,8 @@ def configureClient():
 
 
 
-"""Fetches new transactions from Plaid using a stored access token.
+"""
+Fetches new transactions from Plaid using a stored access token.
 
 This function initializes a Plaid client, reads an access_token from
 'access_token.txt', and retrieves a list of newly added transactions
@@ -39,6 +41,7 @@ Returns:
     list: A list of transaction objects, or None if an error occurs.
 """ 
 def getTransactions():
+
 
     client = configureClient()
     try:
