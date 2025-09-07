@@ -7,6 +7,9 @@ credentials.json
 # Python virtual environment folder
 venv/
 
+# Plaid Sandbox Access Token
+access_token.txt
+
 # Python cache files
 __pycache__/
 *.pyc
