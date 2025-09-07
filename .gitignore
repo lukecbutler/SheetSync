@@ -1,6 +1,9 @@
 # Environment variables - KEEP YOUR SECRETS SAFE!
 .env
 
+# Google Cloud credentials
+credentials.json
+
 # Python virtual environment folder
 venv/
 
