@@ -2,6 +2,7 @@ import os
 import plaid
 from plaid.api import plaid_api
 from plaid.model.products import Products
+from dotenv import load_dotenv
 
 # ==============================================================================
 # Plaid Authenticator
@@ -20,6 +21,7 @@ def produceSandboxAccessToken():
     print("--- Starting Plaid Authentication ---")
     
     # Configure the Plaid client & secret in environment variables
+    load_dotenv()
     PLAID_CLIENT_ID = os.getenv('PLAID_CLIENT_ID')
     PLAID_SECRET = os.getenv('PLAID_SECRET')
     configuration = plaid.Configuration(
