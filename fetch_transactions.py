@@ -53,16 +53,15 @@ def getTransactions():
         request = TransactionsSyncRequest(access_token=access_token)
         response = client.transactions_sync(request)
         transactions = response['added']
-        print(transactions)
+        '''
         for t in transactions:
             print("---")
             print(f"      Name: {t['merchant_name']}")
             print(f"    Amount: ${t['amount']:.2f}")
             print(f"      Date: {t['date']}")
-
+        '''
+        return transactions
     except FileNotFoundError:
         print("❌ access_token.txt not found. Please run authenticate_plaid.py first.")
     except plaid.ApiException as e:
         print(f"❌ An error occurred: {e.body}")
-
-getTransactions()

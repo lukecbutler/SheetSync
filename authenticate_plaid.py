@@ -19,19 +19,20 @@ def produceSandboxAccessToken():
     Performs the one-time authentication to get and save an access_token.
     """
     print("--- Starting Plaid Authentication ---")
-    
+  
     # Configure the Plaid client & secret in environment variables
     load_dotenv()
 
     PLAID_CLIENT_ID = os.getenv('PLAID_CLIENT_ID')
     PLAID_SECRET = os.getenv('PLAID_SECRET')
 
-    # create configuration object to create client to speak to API
+    # create configuration object to create client to speak to API -> eventually creates client
     configuration = plaid.Configuration(
         host=plaid.Environment.Sandbox,
         api_key={'clientId': PLAID_CLIENT_ID, 'secret': PLAID_SECRET}
     )
     api_client = plaid.ApiClient(configuration)
+
     # make client that will respond to requests
     client = plaid_api.PlaidApi(api_client)
 
