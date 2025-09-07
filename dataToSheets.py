@@ -65,7 +65,11 @@ def setDatesInSheet(transactions):
 
 
 def main():
-    pass
+    setMerchantNamesInSheet(transactions)
+    setAmountsInSheet(transactions)
+    setDatesInSheet(transactions)
+
+main()
 
 #example prints
 """    
