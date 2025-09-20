@@ -2,6 +2,7 @@
 # https://docs.gspread.org/en/v6.0.0/user-guide.html#creating-a-spreadsheet
 # Writes to Google Sheets
 # Library for interacting with sheet
+##### Best video to learn manipulating google sheet data in < 20minutes: https://www.youtube.com/watch?v=zCEJurLGFRk
 import gspread
 from google.oauth2.service_account import Credentials
 
